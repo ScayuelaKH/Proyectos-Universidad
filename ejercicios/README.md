@@ -1,0 +1,1 @@
+Está es la versión final del proyecto de la asignatura de Visión Artificial. En ella se enseñaba a trabajar con librerías de python que nos permiten reconocer objetos y a partir de ello nosotros debíamos poder resolver ciertos ejercicios que se mandaban. Su resolución está documentada en el pdf "Memoria_via.pdf".
