@@ -39,7 +39,7 @@ En los casos en los que fuese necesario se informaría de su necesidad de uso.
 ### Medición de ángulos
 
 
-> Necesario el uso de cámara
+> Necesario el uso de cámara, aunque también aplicable a imágenes que tengamos guardadas
 
 
 *Resumen:* Con este programa calibraremos nuestra cámara para poder crear una aplicación de medir grados dados dos puntos en la imagen. Para ello necesitaremos saber cual es la **distancia focal** de nuestra cámara y luego realizar una calibración aproximada 
@@ -67,22 +67,59 @@ Ejecutamos el programa "**actividad.py**", se nos abrirá una ventana con la vis
 
 ### Color
 
-> Necesario el uso de cámara
+> Necesario el uso de cámara, aunque también aplicable a imágenes que tengamos guardadas
 
 > Incluido con menú de ayuda
 
 *Resumen:* Crearemos un clasificador de objetos basándonos en la similitud de los colores de las zonas seleccionadas. 
 
-Ejecutamos el proprama "**color.py**", se nos abrirá una ventana con la vista de la cámara, en ella podremos seleccionar una zona pinchando y arrastrando con el ratón. Si ese lo queremos guardar como modelo para comparar con otras zonas pulsar la tecla "**g**", los iremos guardando y mostrando en una ventana denominada "modelos", y si en cambio queremos deseleccionar la zona y escoger otra pulsar la tecla "**x**". También podremos ver el **histograma** de colores de la zona pulsando la tecla "**r**", si además tenemos ya guardado algún modelo que se le parezca los mostraremos en otra ventana llamada "detectados". En la ventana de la cámara podremos encontrar arriba a la izquierda la similitud de los modelos con la zona detectada (pulsar **r** para actualizar en cada caso) en el mismo orden que en su respectiva ventana, y siempre que supere un threshold del 85% lo mostraremos como detectado.
+Ejecutamos el programa "**color.py**", se nos abrirá una ventana con la vista de la cámara, en ella podremos seleccionar una zona pinchando y arrastrando con el ratón. Si ese lo queremos guardar como modelo para comparar con otras zonas pulsar la tecla "**g**", los iremos guardando y mostrando en una ventana denominada "modelos", y si en cambio queremos deseleccionar la zona y escoger otra pulsar la tecla "**x**". También podremos ver el **histograma** de colores de la zona pulsando la tecla "**r**", si además tenemos ya guardado algún modelo que se le parezca los mostraremos en otra ventana llamada "detectados". En la ventana de la cámara podremos encontrar arriba a la izquierda la similitud de los modelos con la zona detectada (pulsar **r** para actualizar en cada caso) en el mismo orden que en su respectiva ventana, y siempre que supere un threshold del 85% lo mostraremos como detectado.
+
 ![image](https://user-images.githubusercontent.com/33126016/147240862-2f62a393-0b4c-4acf-996f-9613592cefe6.png "Ejemplo con las tres ventanas")
-
-
-
 
 ### Filtros
 
+> Necesario el uso de cámara, aunque también aplicable a imágenes que tengamos guardadas
+
+> Incluido con menú de ayuda
+
+*Resumen:* Podremos aplicar filtros a una zona que seleccionemos de la imágen, además de poder regular sus efectos usando barras deslizantes.
+
+Ejecutamos el programa "**filtros.py**", se nos abrirá una ventana con la vista de la cámara, en ella podremos seleccionar una zona pinchando y arrastrando con el ratón. Teniendo la zona seleccionada podremos aplicarle una selección de filtros según que teclas se pulsen y posteriormente controlar el efecto que tienen usando las barras deslizantes que aparecen en la parte inferior de la ventana:
+
+* **Median Filter:** aplicado al pulsar la tecla **m**, con este conseguimos suavizar la imagen, lo podemos desactivar volviendo a pulsar la tecla.
+
+![image](https://user-images.githubusercontent.com/33126016/147269369-7d6db650-d37a-4bb7-8f9f-c4ebeb3f39f6.png "Efecto aplicando el efecto Median filter")
+
+* **Gaussian Filter:** aplicado al pulsar la tecla **g**, con este conseguimos desenfocar la imagen, lo podemos desactivar volviendo a pulsar la tecla.
+
+![image](https://user-images.githubusercontent.com/33126016/147269407-c6998622-5b17-472b-aa96-4f8aa7539ec1.png "Efecto aplicando el efecto Gaussian filter")
+
+* **Blanco/Negro:** aplicado al pulsar la tecla **r**, cambia los colores a una escala de blancos y negros, este solo puede activarse o desactivarse.
+
+![image](https://user-images.githubusercontent.com/33126016/147269344-6b5aefb8-cc7e-4fca-b982-99f3cd2a595d.png "Ejemplo aplicando el efecto de blanco/negro")
+
+Los efectos se pueden superponer entre sí, y pulsando la tecla **x** deseleccionaremos la zona y quitaremos los filtros aplicados.
+
+![image](https://user-images.githubusercontent.com/33126016/147269718-6274efdf-6e89-4da0-b1e7-0d622ca9e1c7.png "Ejemplo donde se han aplicado varios filtros")
 
 
 ### SIFT
 
+> Necesario el uso de cámara, aunque también aplicable a imágenes que tengamos guardadas
 
+*Resumen:* Aplicación de reconocimiento de objetos basada en número de coincidencias de "keypoints".
+
+Con este programa necesitamos tener unas imágenes que vamos a proporcionar como modelo, tras lo cual al usar la cámara irá cogiendo lo que vé y calcula los aciertos que encuentra con los modelos que tiene de base. En la ventana podremos observar a la izquierda la imágen del modelo que más se parece con lo que se le enseña por cámara (que aparece al lado derecho). 
+
+![image](https://user-images.githubusercontent.com/33126016/147271095-bcfcba00-8bbf-4a54-a5d8-e70b9e4197fc.png "Ejemplo del programa reconociendo la imagen")
+
+Se puede probar con ejemplos caseros colocando aquellas imágenes a usar en la carpeta "**sift/modelos**". 
+Ojo, en este programa no es tan sencillo usar la cámara del móvil, por defecto tratará de usar la propia cámara integrada por el ordenador, se puede cambiar modificando un par de líneas de código:
+
+```
+cap = cv.VideoCapture(0)
+#El paso siguiente es necesario para capturar una camara ip en una red local domestica
+#cap = cv.VideoCapture("url del móvil")
+#en el caso de usar camara usb o integrada usar el otro y comentar este
+```
