@@ -55,12 +55,24 @@ En los casos en los que fuese necesario se informaría de su necesidad de uso.
 * Probamos a medir ángulos, pero antes se debe abrir el programa "**medidor_grados.py**" con un editor de texto cualquiera y modificar el valor de la variable "**f**" por el de nuestra distancia focal. Tras ello ejecutar (dentro de nuestro entorno de anaconda previamente creado) el programa con el parámetro de la cámara y pinchar en la ventana creada los dos puntos entre los que queremos sacar el ángulo.
 ![image](https://user-images.githubusercontent.com/33126016/147234432-a1f19c05-95a3-4593-a18c-bda8eb377d7c.png "Ejemplo de medida de grados")
 
-
 ### Actividad
 
+> Necesario el uso de cámara
 
+> Incluido con menú de ayuda
+
+*Resumen:* Podremos tener nuestra propia cámara de seguridad, al ejecutar el programa seleccionaremos una zona a monitorizar y si se detecta movimiento se grabará lo que ocurra.
+
+Ejecutamos el programa "**actividad.py**", se nos abrirá una ventana con la vista de la cámara, en ella podremos seleccionar una zona pinchando y arrastrando con el ratón. Una vez seleccionada, para empezar a monitorizar pulsar la tecla "**c**", y si en algún momento se quiere cambiar la zona de monitoreo se puede pulsar la tecla "**x**" para reiniciar todo el proceso. Se comenzará a grabar si se detecta un cambio significativo en la zona seleccionada y no se parará hasta que vuelva al estado original. Al terminar el programa se guardará el video grabado en la misma carpeta.
 
 ### Color
+
+> Necesario el uso de cámara
+
+> Incluido con menú de ayuda
+
+*Resumen:* 
+
 
 
 
