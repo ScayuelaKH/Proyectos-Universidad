@@ -71,7 +71,10 @@ Ejecutamos el programa "**actividad.py**", se nos abrirá una ventana con la vis
 
 > Incluido con menú de ayuda
 
-*Resumen:* 
+*Resumen:* Crearemos un clasificador de objetos basándonos en la similitud de los colores de las zonas seleccionadas. 
+
+Ejecutamos el proprama "**color.py**", se nos abrirá una ventana con la vista de la cámara, en ella podremos seleccionar una zona pinchando y arrastrando con el ratón. Si ese lo queremos guardar como modelo para comparar con otras zonas pulsar la tecla "**g**", los iremos guardando y mostrando en una ventana denominada "modelos", y si en cambio queremos deseleccionar la zona y escoger otra pulsar la tecla "**x**". También podremos ver el **histograma** de colores de la zona pulsando la tecla "**r**", si además tenemos ya guardado algún modelo que se le parezca los mostraremos en otra ventana llamada "detectados". En la ventana de la cámara podremos encontrar arriba a la izquierda la similitud de los modelos con la zona detectada (pulsar **r** para actualizar en cada caso) en el mismo orden que en su respectiva ventana, y siempre que supere un threshold del 85% lo mostraremos como detectado.
+![image](https://user-images.githubusercontent.com/33126016/147240862-2f62a393-0b4c-4acf-996f-9613592cefe6.png "Ejemplo con las tres ventanas")
 
 
 
