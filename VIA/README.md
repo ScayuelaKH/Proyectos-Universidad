@@ -7,6 +7,12 @@ Consiste en la resolución de una serie de ejercicios siendo cada uno independie
 
 * [Tecnologías usadas](#tecnologías-usadas)
 * [Instalación](#instalación)
+* [Programas](#programas)
+* [Medición de ángulos](#medición-de-ángulos)
+* [Actividad](#actividad)
+* [Color](#color)
+* [Filtros](#filtros)
+* [SIFT](#sift)
 
 ## Tecnologías usadas
 
