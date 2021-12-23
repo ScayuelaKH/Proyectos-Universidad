@@ -33,18 +33,27 @@ Para circunvalar este problema podemos hacer uso de la cámara de nuestro móvil
 
 Estos son las resoluciones de los ejercicios que se nos pedían, a la hora de probarlos hay que destacar ciertos detalles para poder probarlos en su integridad:
 * En algunos es necesaria la entrada del usuario para controlar lo que sucede, para ello se ha implementado un menú de ayuda al cual se puede acceder oprimiendo la tecla "**h**".
-* En algunos es necesario usar una cámara, para ello se puede ejecutar el programa poniendo como argumento "**--dev=phone**".
+* En algunos es necesario usar una cámara, para ello se puede ejecutar el programa poniendo como parámetro "**--dev=phone**".
 En los casos en los que fuese necesario se informaría de su necesidad de uso.
 
-### Calibración
+### Medición de ángulos
 
 
 > Necesario el uso de cámara
 
 
-*Resumen:* Con este programa calibraremos nuestra cámara para poder crear una aplicación de medir grados dados dos puntos en la imagen.
+*Resumen:* Con este programa calibraremos nuestra cámara para poder crear una aplicación de medir grados dados dos puntos en la imagen. Para ello necesitaremos saber cual es la **distancia focal** de nuestra cámara y luego realizar una calibración aproximada 
 
-* Para empezar es necesario hacer una calibración precisa de la cámara usando un patrón de "**chessboard**", se ha de abrir la imágen **pattern.png** que se encuentra dentro de la carpeta "**calibrate**" y con la cámara que se quiere calibrar sacarle fotos desde distintos ángulos.
+> Pasos opcionales si ya conocemos la distancia focal de nuestra cámara.
+> 
+>> * Para empezar es necesario hacer una calibración precisa de la cámara usando un patrón de "**chessboard**", se ha de abrir la imágen **pattern.png** que se encuentra dentro de la carpeta "**calibrate**" y con la cámara que se quiere calibrar sacarle fotos desde distintos ángulos. En el caso de ejemplo bajé la resolución a la mitad para poder trabajar de manera más cómoda aunque no es obligatorio hacerlo. Una vez se tienen las fotos se han de guardar en la carpeta "**calibrate**", además de borrar las que ya había (si no se había hecho anteriormente). 
+>>
+>> ![image](https://user-images.githubusercontent.com/33126016/147234570-e48d5baa-2f5f-40ca-9958-66dc2f9babc5.png "Ejemplo de resultado de calibración")
+>>
+>>   * El siguiente paso es ejecutar el programa "**calibrate.py**" pasandole como argumento las imágenes de la carpeta (menos la del patrón), para poder así obtener la "**distancia focal** de nuestra cámara, lo podemos encontrar como el primer valor de la matriz de cámara, y el **error cuadrático medio**. Este último cuanto menor sea mejor cálculo de la distancia focal habremos realizado y mejor podremos calcular los ángulos.
+ 
+* Probamos a medir ángulos, pero antes se debe abrir el programa "**medidor_grados.py**" con un editor de texto cualquiera y modificar el valor de la variable "**f**" por el de nuestra distancia focal. Tras ello ejecutar (dentro de nuestro entorno de anaconda previamente creado) el programa con el parámetro de la cámara y pinchar en la ventana creada los dos puntos entre los que queremos sacar el ángulo.
+![image](https://user-images.githubusercontent.com/33126016/147234432-a1f19c05-95a3-4593-a18c-bda8eb377d7c.png "Ejemplo de medida de grados")
 
 
 ### Actividad
