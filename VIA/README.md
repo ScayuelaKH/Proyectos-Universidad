@@ -13,6 +13,10 @@ Consiste en la resolución de una serie de ejercicios siendo cada uno independie
 * [Color](#color)
 * [Filtros](#filtros)
 * [SIFT](#sift)
+* [Rectif](#rectif)
+* [Pano](#pano)
+* [RA](#ra)
+* [Anon](#anon)
 
 ## Tecnologías usadas
 
@@ -52,7 +56,7 @@ En los casos en los que fuese necesario se informaría de su necesidad de uso.
 
 > Pasos opcionales si ya conocemos la distancia focal de nuestra cámara.
 > 
->> * Para empezar es necesario hacer una calibración precisa de la cámara usando un patrón de "**chessboard**", se ha de abrir la imágen **pattern.png** que se encuentra dentro de la carpeta "**calibrate**" y con la cámara que se quiere calibrar sacarle fotos desde distintos ángulos. En el caso de ejemplo bajé la resolución a la mitad para poder trabajar de manera más cómoda aunque no es obligatorio hacerlo. Una vez se tienen las fotos se han de guardar en la carpeta "**calibrate**", además de borrar las que ya había (si no se había hecho anteriormente). 
+>> * Para empezar es necesario hacer una calibración precisa de la cámara usando un patrón de "**chessboard**", se ha de abrir la imagen **pattern.png** que se encuentra dentro de la carpeta "**calibrate**" y con la cámara que se quiere calibrar sacarle fotos desde distintos ángulos. En el caso de ejemplo bajé la resolución a la mitad para poder trabajar de manera más cómoda aunque no es obligatorio hacerlo. Una vez se tienen las fotos se han de guardar en la carpeta "**calibrate**", además de borrar las que ya había (si no se había hecho anteriormente). 
 >>
 >> ![image](https://user-images.githubusercontent.com/33126016/147234570-e48d5baa-2f5f-40ca-9958-66dc2f9babc5.png "Ejemplo de resultado de calibración")
 >>
@@ -89,7 +93,7 @@ Ejecutamos el programa "**color.py**", se nos abrirá una ventana con la vista d
 
 > Incluido con menú de ayuda
 
-*Resumen:* Podremos aplicar filtros a una zona que seleccionemos de la imágen, además de poder regular sus efectos usando barras deslizantes.
+*Resumen:* Podremos aplicar filtros a una zona que seleccionemos de la imagen, además de poder regular sus efectos usando barras deslizantes.
 
 Ejecutamos el programa "**filtros.py**", se nos abrirá una ventana con la vista de la cámara, en ella podremos seleccionar una zona pinchando y arrastrando con el ratón. Teniendo la zona seleccionada podremos aplicarle una selección de filtros según que teclas se pulsen y posteriormente controlar el efecto que tienen usando las barras deslizantes que aparecen en la parte inferior de la ventana:
 
@@ -116,7 +120,7 @@ Los efectos se pueden superponer entre sí, y pulsando la tecla **x** deseleccio
 
 *Resumen:* Aplicación de reconocimiento de objetos basada en número de coincidencias de "keypoints".
 
-Con este programa necesitamos tener unas imágenes que vamos a proporcionar como modelo, tras lo cual al usar la cámara irá cogiendo lo que vé y calcula los aciertos que encuentra con los modelos que tiene de base. En la ventana podremos observar a la izquierda la imágen del modelo que más se parece con lo que se le enseña por cámara (que aparece al lado derecho). 
+Con este programa necesitamos tener unas imágenes que vamos a proporcionar como modelo, tras lo cual al usar la cámara irá cogiendo lo que vé y calcula los aciertos que encuentra con los modelos que tiene de base. En la ventana podremos observar a la izquierda la imagen del modelo que más se parece con lo que se le enseña por cámara (que aparece al lado derecho). 
 
 ![image](https://user-images.githubusercontent.com/33126016/147271095-bcfcba00-8bbf-4a54-a5d8-e70b9e4197fc.png "Ejemplo del programa reconociendo la imagen")
 
@@ -129,3 +133,24 @@ cap = cv.VideoCapture(0)
 #cap = cv.VideoCapture("url del móvil")
 #en el caso de usar camara usb o integrada usar el otro y comentar este
 ```
+
+### Rectif
+
+> Incluido con menú de ayuda
+
+*Resumen:* Dada una imagen se le aplican unas transformaciones para "rectificarla" y poder así medir distancias en ella.
+
+Este programa viene con dos ejemplos para probar, para ello se ha de ejecutar el programa "**rectif.py**" con el parámetro "**--dev=/ruta/de/imagen --loop**", los ejemplos se encuentran dentro de la carpeta "rectif". Para poder interactuar con el programa primero se ha de medir el objeto que se quiere rectificar o conocer sus dimensiones de antemano, está pensado para dar los resultados en "**milímetros**", por lo que se han de dar las dimensiones en esta escala. Se han de modificar en el código las variables "**height_real**" y "**width_real**" dentro del código.
+
+Hay dos maneras de poder hacer la prueba, manual o automáticamente:
+
+* Manual: Tras ejecutar el programa con la imagen pinchar 
+
+### Pano
+
+
+### RA
+
+
+### Anon
+
