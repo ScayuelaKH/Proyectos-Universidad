@@ -140,11 +140,31 @@ cap = cv.VideoCapture(0)
 
 *Resumen:* Dada una imagen se le aplican unas transformaciones para "rectificarla" y poder así medir distancias en ella.
 
-Este programa viene con dos ejemplos para probar, para ello se ha de ejecutar el programa "**rectif.py**" con el parámetro "**--dev=/ruta/de/imagen --loop**", los ejemplos se encuentran dentro de la carpeta "rectif". Para poder interactuar con el programa primero se ha de medir el objeto que se quiere rectificar o conocer sus dimensiones de antemano, está pensado para dar los resultados en "**milímetros**", por lo que se han de dar las dimensiones en esta escala. Se han de modificar en el código las variables "**height_real**" y "**width_real**" dentro del código.
+Este programa viene con dos ejemplos para probar, para ello se ha de ejecutar el programa "**rectif.py**" con el parámetro "**--dev=/ruta/de/imagen --loop**", los ejemplos se encuentran dentro de la carpeta "rectif". Para poder interactuar con el programa primero se ha de medir el objeto que se quiere rectificar o conocer sus dimensiones de antemano, está pensado para dar los resultados en "**milímetros**", por lo que se han de dar las dimensiones en esta escala, modificando en el código las variables "**height_real**" y "**width_real**". De base se dan las dimensiones del primer ejemplo, un carnet de conducir.
 
-Hay dos maneras de poder hacer la prueba, manual o automáticamente:
+![image](https://user-images.githubusercontent.com/33126016/147350762-0467a060-a051-43b7-ab93-502ed9feaef8.png "Ejemplo de uso con el carnet")
 
-* Manual: Tras ejecutar el programa con la imagen pinchar 
+Hay dos maneras de rectificar, manualmente o automáticamente:
+
+* Manualmente: Tras ejecutar el programa con la imagen pinchar con el click izquierdo en las cuatro cuatro esquinas del carnet, podemos corregir el último punto puesto pulsando el boton de la rueda del ratón, o si se prefiere deseleccionar todos pulsando la tecla "**x**".
+
+![image](https://user-images.githubusercontent.com/33126016/147351000-43064ef7-f806-489c-8c79-0b3c173aa201.png "Ejemplo colocando los puntos")
+
+Una vez los tengamos colocados pulsamos la tecla "**r**" y se abrirá una ventana nueva con la imagen rectificada, en esta podremos medir distancias en milímetros colocando dos puntos pulsando el click izquierdo. En el ejemplo del carnet uno puede comprobar que las distancias son correctas usando como referencia, por ejemplo, la regla, o midiendo las monedas.
+
+![image](https://user-images.githubusercontent.com/33126016/147351198-c0d53701-9ee2-4191-b452-2622f899550c.png "Imagen rectificada")
+
+Si queremos se pueden guardar los puntotos seleccionados pulsando la tecla "**g**", creandose un documento de texto con el nombre "**Puntos_RectifX.txt**" donde "**X**" se sustituye por un número en caso de tener ya archivos con el mismo nombre y con el siguiente formato:
+
+![image](https://user-images.githubusercontent.com/33126016/147351500-20e87694-1720-43b5-a8d4-df124db036c5.png "Ejemplo documento de texto guardado")
+
+* Automáticamente: Antes de ejecutar el programa podemos modificarlo con los contenidos dentro de los documentos guardados:
+
+![image](https://user-images.githubusercontent.com/33126016/147351647-6c5905b6-b557-45d0-89f1-1953c32173b8.png "Parte a modificar")
+
+De esta forma una vez ejecutamos con la imagen aparecerá ya con los puntos colocados y simplemente tendremos que pulsar **r** para que se rectifique.
+
+En el proyecto aparte de dar las imagenes también proporciono ya dos documentos de texto con los puntos y las dimensiones guardadas para poder probarlo de manera automática.
 
 ### Pano
 
